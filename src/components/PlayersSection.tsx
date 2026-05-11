@@ -26,17 +26,25 @@ function PlayersSection() {
     }
 
     void (async () => {
-      const [{ gsap }, { ScrollTrigger }] = await Promise.all([
+      const [{ gsap }, { ScrollTrigger }, { SplitText }] = await Promise.all([
         import('gsap'),
         import('gsap/ScrollTrigger'),
+        import('gsap/SplitText'),
       ])
 
-      gsap.registerPlugin(ScrollTrigger)
+      gsap.registerPlugin(ScrollTrigger, SplitText)
 
       const ctx = gsap.context(() => {
         const cards = gsap.utils.toArray<HTMLElement>('[data-player-card]')
-        const info = gsap.utils.toArray<HTMLElement>('[data-player-copy]')
         const perks = gsap.utils.toArray<HTMLElement>('[data-player-benefit]')
+        const titleSplit = SplitText.create('[data-player-title]', {
+          type: 'words',
+          wordsClass: 'player-title-word++',
+        })
+        const descriptionSplit = SplitText.create('[data-player-description]', {
+          type: 'words',
+          wordsClass: 'player-description-word++',
+        })
 
         cards.forEach((card, index) => {
           gsap.set(card, {
@@ -60,14 +68,44 @@ function PlayersSection() {
 
         timeline
           .from(
-            info,
+            '[data-player-badge]',
             {
-              y: 26,
+              y: 18,
               opacity: 0,
-              stagger: 0.08,
-              duration: 0.55,
+              duration: 0.42,
             },
             0,
+          )
+          .from(
+            titleSplit.words,
+            {
+              yPercent: 105,
+              opacity: 0,
+              rotate: 2,
+              transformOrigin: 'left bottom',
+              stagger: 0.032,
+              duration: 0.62,
+            },
+            0.12,
+          )
+          .from(
+            descriptionSplit.words,
+            {
+              yPercent: 112,
+              opacity: 0,
+              stagger: 0.012,
+              duration: 0.34,
+            },
+            0.38,
+          )
+          .from(
+            '[data-player-button]',
+            {
+              y: 18,
+              opacity: 0,
+              duration: 0.4,
+            },
+            0.52,
           )
           .to(
             cards,
@@ -105,11 +143,11 @@ function PlayersSection() {
       ref={sectionRef}
       className="bg-[rgba(250,243,221,1)] px-5 py-12 sm:px-8 sm:py-14 lg:px-10 lg:py-16"
     >
-      <div className="mx-auto w-full max-w-442.5">
+      <div className="mx-auto w-full max-w-[1770px]">
         <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,620px)_1fr] lg:gap-6">
-          <div className="max-w-145">
+          <div className="max-w-[580px]">
             <div
-              data-player-copy
+              data-player-badge
               className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.04em] text-[rgba(16,70,162,1)] shadow-[0_8px_18px_rgba(1,20,58,0.06)]"
             >
               <img src="/icon-worldcup.png" alt="" aria-hidden="true" className="h-3.5 w-3.5 object-contain" />
@@ -117,22 +155,22 @@ function PlayersSection() {
             </div>
 
             <h2
-              data-player-copy
-              className="mt-4 text-[3.4rem] leading-[0.92] font-extrabold uppercase text-[rgba(8,34,92,1)] sm:text-[4.6rem]"
+              data-player-title
+              className="mt-4 max-w-[15ch] text-[3.4rem] leading-[0.92] font-extrabold uppercase text-[rgba(8,34,92,1)] sm:text-[4.6rem]"
             >
-              Colecione historias viva paixões
+              Colecione histórias viva paixões
             </h2>
 
             <p
-              data-player-copy
-              className="mt-8 max-w-105 text-[0.98rem] leading-6 font-medium text-[rgba(0,0,0,0.56)]"
+              data-player-description
+              className="mt-8 max-w-[420px] text-[0.98rem] leading-6 font-medium text-[rgba(0,0,0,0.56)]"
             >
               As figurinhas Panini da Copa do Mundo 2026 celebram os momentos, os craques e
-              as emocoes que unem milhoes de fas pelo planeta. Monte seu album, complete sua
-              colecao e faca parte dessa historia.
+              as emoções que unem milhões de fãs pelo planeta. Monte seu álbum, complete sua
+              coleção e faça parte dessa história.
             </p>
 
-            <div data-player-copy className="mt-8">
+            <div data-player-button className="mt-8">
               <CtaButton
                 icon="/cart.svg"
                 iconClassName="[filter:brightness(0)_saturate(100%)_invert(11%)_sepia(53%)_saturate(1553%)_hue-rotate(196deg)_brightness(94%)_contrast(101%)]"

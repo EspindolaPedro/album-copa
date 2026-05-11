@@ -22,8 +22,8 @@ function HeroContent() {
         data-hero-copy
         className="mt-6 max-w-[420px] text-[1rem] leading-7 text-[rgba(1,20,58,0.62)] sm:text-[1.06rem]"
       >
-        Colecione historias. Conecte paises. Viva a emocao da Copa do Mundo 2026 com
-        o album oficial de figurinhas Panini.
+        Colecione histórias. Conecte países. Viva a emoção da Copa do Mundo 2026 com
+        o álbum oficial de figurinhas Panini.
       </p>
 
       <div className="relative z-20 mt-8 flex flex-col gap-3 sm:flex-row">
@@ -44,7 +44,7 @@ function HeroContent() {
           className="inline-flex h-14 items-center justify-center gap-2 rounded-2xl border border-[rgba(1,20,58,0.16)] bg-white/86 px-6 text-sm font-semibold text-[rgba(1,20,58,0.92)] shadow-[0_14px_30px_rgba(1,20,58,0.08)] backdrop-blur transition hover:-translate-y-0.5"
         >
           <img src="/play.svg" alt="" aria-hidden="true" className="h-4 w-4 object-contain" />
-          Conheca o produto
+          Conheça o produto
         </a>
       </div>
 

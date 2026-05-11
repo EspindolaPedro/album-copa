@@ -1,7 +1,7 @@
-export const navItems = ['Inicio', 'Produto', 'copa', 'Suporte', 'figurinho']
+export const navItems = ['Início', 'Produto', 'copa', 'Suporte', 'figurinho']
 
 export const stats = [
-  { icon: '/trophy.png', value: '48', label: 'Selecoes' },
+  { icon: '/trophy.png', value: '48', label: 'Seleções' },
   { icon: '/soccer.png', value: '104', label: 'Partidas' },
   { icon: '/stadium.png', value: '16', label: 'Sedes' },
   { icon: '/figurinhas.png', value: '+1000', label: 'Figurinhas' },
@@ -26,7 +26,7 @@ export const playerBenefits = [
   {
     icon: '/figurinha-jogadores/icones/gem.svg',
     title: 'Qualidade premium',
-    description: 'Impresso de alta qualidade e acabamento impecavel em cada figurinha.',
+    description: 'Impresso de alta qualidade e acabamento impecável em cada figurinha.',
   },
   {
     icon: '/figurinha-jogadores/icones/truck.svg',
