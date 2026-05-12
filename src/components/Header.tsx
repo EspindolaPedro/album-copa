@@ -3,7 +3,7 @@ import CtaButton from './CtaButton'
 
 function Header() {
   return (
-    <header data-hero-header className="relative flex items-center justify-between gap-4 md:min-h-[72px]">
+    <header data-hero-header className="relative flex items-center justify-between gap-4 md:min-h-[64px]">
       <a href="/" aria-label="Panini Home" className="shrink-0">
         <img src="/logo-panini.png" alt="Panini" className="h-auto w-23 sm:w-25" />
       </a>

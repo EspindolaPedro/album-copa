@@ -181,15 +181,15 @@ function App() {
     <main className="min-h-screen bg-[rgba(254,246,224,1)] text-[rgba(1,20,58,1)]">
       <section
         ref={heroRef}
-        className="relative z-10 min-h-screen w-full overflow-hidden bg-[rgba(254,246,224,1)] bg-cover bg-position-[center_right] bg-no-repeat px-5 py-5 sm:px-8 sm:py-7 lg:px-10 lg:py-8"
+        className="relative z-10 h-screen w-full overflow-hidden bg-[rgba(254,246,224,1)] bg-cover bg-position-[center_right] bg-no-repeat px-4 py-3 sm:px-5 sm:py-4 lg:px-7 lg:py-4"
         style={{
           backgroundImage: "url('/bg-hero.jpg')",
         }}
       >
-        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-2.5rem)] w-full max-w-[1770px] flex-col sm:min-h-[calc(100vh-3.5rem)] lg:min-h-[calc(100vh-4rem)]">
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1770px] flex-col">
           <Header />
 
-          <div className="grid flex-1 items-center gap-10 pb-24 pt-12 lg:grid-cols-[minmax(0,560px)_1fr] lg:gap-6 lg:pt-14">
+          <div className="grid min-h-0 flex-1 items-center gap-4 pb-2 pt-3 lg:grid-cols-[minmax(0,540px)_1fr] lg:gap-5 lg:pb-4 lg:pt-4">
             <HeroContent />
             <div className="hidden lg:block" />
           </div>

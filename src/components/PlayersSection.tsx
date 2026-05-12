@@ -209,6 +209,7 @@ function PlayersSection() {
                 <img src={benefit.icon} alt="" aria-hidden="true" className="h-6 w-6 object-contain" />
                 <h3 className="text-[1.08rem] font-semibold uppercase">{benefit.title}</h3>
               </div>
+              <div className="mt-4 h-px w-[108px] bg-white/35" />
               <p className="mt-4 max-w-[24ch] text-[0.9rem] leading-6 text-white/84">
                 {benefit.description}
               </p>

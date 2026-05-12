@@ -40,7 +40,7 @@ function RibbonMarquee() {
   return (
     <section
       ref={sectionRef}
-      className="pointer-events-none absolute inset-x-0 top-5 z-30 -translate-y-1/2 overflow-hidden"
+      className="pointer-events-none absolute inset-x-0  z-30 overflow-hidden -top-10"
     >
       <div ref={trackRef} className="flex w-max">
         {[0, 1, 2, 3].map((item) => (
