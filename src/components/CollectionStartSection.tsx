@@ -114,51 +114,62 @@ function CollectionStartSection() {
 
       <div className="relative z-10 mx-auto grid w-full max-w-[1770px] items-center gap-10 lg:grid-cols-[minmax(0,620px)_1fr]">
         <div className="relative z-10 max-w-[610px]">
-          <h2
-            data-fifth-title
-            className="text-[3.1rem] leading-[0.9] font-extrabold uppercase text-[rgba(1,20,58,1)] sm:text-[4.35rem] lg:text-[4.8rem]"
-          >
-            <span className="block">Sua colecao</span>
-            <span className="block">comeca</span>
-            <span className="block">aqui.</span>
-          </h2>
-
-          <div data-fifth-copy className="mt-8 max-w-[48ch] text-[0.92rem] leading-6 font-medium text-[rgba(1,20,58,0.58)]">
-            <p>
-              Reviva cada estadio, selecao e momento historico da Copa do Mundo 2026
-              atraves da colecao oficial Panini.
-            </p>
-            <p className="mt-3">
-              Complete paginas, encontre figurinhas raras e transforme cada pacote em uma
-              nova descoberta.
-            </p>
-          </div>
-
-          <div data-fifth-actions className="relative z-20 mt-8 flex flex-col gap-3 sm:flex-row">
-            <CtaButton
-              icon="/cart.svg"
-              iconClassName="[filter:brightness(0)_saturate(100%)_invert(11%)_sepia(53%)_saturate(1553%)_hue-rotate(196deg)_brightness(94%)_contrast(101%)]"
-              className="h-12 rounded-[8px] px-6 text-[0.76rem] shadow-[0_12px_24px_rgba(255,209,55,0.24)]"
-            >
-              Comprar Agora
-            </CtaButton>
-            <CtaButton
-              icon="/play.svg"
-              variant="secondary"
-              className="h-12 rounded-[8px] border-[rgba(1,20,58,0.34)] bg-[rgba(254,246,224,0.58)] px-6 text-[0.76rem] shadow-none backdrop-blur-sm"
-            >
-              Explorar Colecao
-            </CtaButton>
-          </div>
-
           <img
-            data-fifth-viva
-            src="/quinta-section/viva.png"
-            alt="Viva essa paixao"
+            src="/quarta-section/detalhes.png"
+            alt=""
+            aria-hidden="true"
             loading="lazy"
             decoding="async"
-            className="mt-10 w-[230px] object-contain sm:w-[270px] lg:ml-4"
+            className="pointer-events-none absolute left-[-22px] top-[-18px] z-0 h-[230px] w-auto opacity-100 sm:left-[-34px] sm:top-[-22px] sm:h-[292px] lg:left-[-54px] lg:top-1/2 lg:h-[360px] lg:-translate-y-1/2"
           />
+
+          <div className="relative z-10">
+            <h2
+              data-fifth-title
+              className="text-[3.1rem] leading-[0.9] font-extrabold uppercase text-[rgba(1,20,58,1)] sm:text-[4.35rem] lg:text-[4.8rem]"
+            >
+              <span className="block">Sua colecao</span>
+              <span className="block">comeca</span>
+              <span className="block">aqui.</span>
+            </h2>
+
+            <div data-fifth-copy className="mt-8 max-w-[48ch] text-[0.92rem] leading-6 font-medium text-[rgba(1,20,58,0.58)]">
+              <p>
+                Reviva cada estadio, selecao e momento historico da Copa do Mundo 2026
+                atraves da colecao oficial Panini.
+              </p>
+              <p className="mt-3">
+                Complete paginas, encontre figurinhas raras e transforme cada pacote em uma
+                nova descoberta.
+              </p>
+            </div>
+
+            <div data-fifth-actions className="relative z-20 mt-8 flex flex-col gap-3 sm:flex-row">
+              <CtaButton
+                icon="/cart.svg"
+                iconClassName="[filter:brightness(0)_saturate(100%)_invert(11%)_sepia(53%)_saturate(1553%)_hue-rotate(196deg)_brightness(94%)_contrast(101%)]"
+                className="h-12 rounded-[8px] px-6 text-[0.76rem] shadow-[0_12px_24px_rgba(255,209,55,0.24)]"
+              >
+                Comprar Agora
+              </CtaButton>
+              <CtaButton
+                icon="/play.svg"
+                variant="secondary"
+                className="h-12 rounded-[8px] border-[rgba(1,20,58,0.34)] bg-[rgba(254,246,224,0.58)] px-6 text-[0.76rem] shadow-none backdrop-blur-sm"
+              >
+                Explorar Colecao
+              </CtaButton>
+            </div>
+
+            <img
+              data-fifth-viva
+              src="/quinta-section/viva.png"
+              alt="Viva essa paixao"
+              loading="lazy"
+              decoding="async"
+              className="mt-10 w-[230px] object-contain sm:w-[270px] lg:ml-4"
+            />
+          </div>
         </div>
         <div className="min-h-[420px] lg:min-h-[680px]" aria-hidden="true" />
       </div>
