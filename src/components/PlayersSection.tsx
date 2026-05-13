@@ -36,7 +36,6 @@ function PlayersSection() {
 
       const ctx = gsap.context(() => {
         const cards = gsap.utils.toArray<HTMLElement>('[data-player-card]')
-        const perks = gsap.utils.toArray<HTMLElement>('[data-player-benefit]')
         const titleSplit = SplitText.create('[data-player-title]', {
           type: 'words',
           wordsClass: 'player-title-word++',
@@ -120,16 +119,19 @@ function PlayersSection() {
             },
             0.14,
           )
-          .from(
-            perks,
-            {
-              y: 22,
-              opacity: 0,
-              stagger: 0.08,
-              duration: 0.45,
-            },
-            0.34,
-          )
+
+        gsap.from('[data-player-benefit]', {
+          y: 28,
+          opacity: 0,
+          stagger: 0.09,
+          duration: 0.5,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '[data-player-benefits-grid]',
+            start: 'top 82%',
+            toggleActions: 'play none none reverse',
+          },
+        })
       }, section)
 
       revertContext = () => ctx.revert()
@@ -198,7 +200,7 @@ function PlayersSection() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 lg:mt-12 lg:grid-cols-4">
+        <div data-player-benefits-grid className="mt-10 grid gap-4 lg:mt-12 lg:grid-cols-4">
           {playerBenefits.map((benefit) => (
             <div
               key={benefit.title}

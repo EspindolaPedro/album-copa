@@ -1,10 +1,12 @@
 import { useLayoutEffect, useRef } from 'react'
+import CollectionStartSection from './components/CollectionStartSection'
 import FeatureAside from './components/FeatureAside'
 import FeatureCards from './components/FeatureCards'
 import Header from './components/Header'
 import HeroContent from './components/HeroContent'
 import PaymentBadge from './components/PaymentBadge'
 import PlayersSection from './components/PlayersSection'
+import PremiumCollectionSection from './components/PremiumCollectionSection'
 import RibbonMarquee from './components/RibbonMarquee'
 import ShowcaseSection from './components/ShowcaseSection'
 
@@ -207,6 +209,8 @@ function App() {
       </div>
 
       <PlayersSection />
+      <PremiumCollectionSection />
+      <CollectionStartSection />
     </main>
   )
 }

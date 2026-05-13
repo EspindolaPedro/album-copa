@@ -1,7 +1,7 @@
-export const navItems = ['Início', 'Produto', 'copa', 'Suporte', 'figurinho']
+export const navItems = ['Inicio', 'Produto', 'copa', 'Suporte', 'figurinho']
 
 export const stats = [
-  { icon: '/trophy.png', value: '48', label: 'Seleções' },
+  { icon: '/trophy.png', value: '48', label: 'Selecoes' },
   { icon: '/soccer.png', value: '104', label: 'Partidas' },
   { icon: '/stadium.png', value: '16', label: 'Sedes' },
   { icon: '/figurinhas.png', value: '+1000', label: 'Figurinhas' },
@@ -26,7 +26,7 @@ export const playerBenefits = [
   {
     icon: '/figurinha-jogadores/icones/gem.svg',
     title: 'Qualidade premium',
-    description: 'Impresso de alta qualidade e acabamento impecável em cada figurinha.',
+    description: 'Impresso de alta qualidade e acabamento impecavel em cada figurinha.',
   },
   {
     icon: '/figurinha-jogadores/icones/truck.svg',
@@ -45,7 +45,21 @@ export const playerBenefits = [
   },
 ]
 
+export const premiumHighlights = [
+  'Abrir sem pressa',
+  'Trocar com orgulho',
+  'Guardar como memoria',
+]
+
+export const officialTrustItems = [
+  'Produto oficial',
+  'Pagamento protegido',
+  'Entrega nacional',
+]
+
 export type Stat = (typeof stats)[number]
 export type Feature = (typeof features)[number]
 export type PaymentMethod = (typeof paymentMethods)[number]
 export type PlayerBenefit = (typeof playerBenefits)[number]
+export type PremiumHighlight = (typeof premiumHighlights)[number]
+export type OfficialTrustItem = (typeof officialTrustItems)[number]
